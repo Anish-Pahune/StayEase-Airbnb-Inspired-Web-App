@@ -1,0 +1,40 @@
+<%- layout("/layouts/boilerplate") %>
+
+<div class="row mt-3">
+    <div class="col-6 offset-3">
+        <h2>Signup On StayEase</h2>
+        <form method="post" action="/signup" novalidate class="needs-validation" id="signupForm">
+            <div class="mb-3">
+                <label for="username" class="form-label">Username</label>
+                <input name="user[username]" type="text" class="form-control border-primary" id="username" required>
+                <div class="invalid-feedback" id="usernameError"></div>
+                <div class="valid-feedback">Looks Good!</div>
+            </div>
+
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input name="user[email]" type="email" class="form-control border-primary" id="email" required>
+                <div class="invalid-feedback" id="emailError"></div>
+                <div class="valid-feedback">Looks Good!</div>
+            </div>
+
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input name="user[password]" type="password" class="form-control border-primary" id="password" required>
+                <div class="invalid-feedback" id="passwordError"></div>
+                <div class="valid-feedback">Looks Good!</div>
+            </div>
+
+            <div class="mb-3">
+                <label for="confirmPassword" class="form-label">Confirm Password</label>
+                <input type="password" class="form-control border-primary" id="confirmPassword" required>
+                <div class="invalid-feedback" id="confirmPassError"></div>
+                <div class="valid-feedback">Looks Good!</div>
+            </div>
+
+            <button class="btn btn-success mb-3" type="submit">Signup</button>
+        </form>
+    </div>
+</div>
+
+<script src="/signupValidation.js"></script>
